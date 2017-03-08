@@ -1,0 +1,49 @@
+/* ================ 全局function ============ */
+/*浮动*/
+.fl(){float:left;}
+.fr(){float:right;}
+.fn(){float:none;}
+
+/*清除浮动*/
+.clear(){clear:both;}
+.clearfix(){clear:both;zoom:1;&:after{clear:both;display:block;height:0;font-size:0;content:".";visibility:hidden;}}
+
+/*盒子模型*/
+.size(@w,@h){width:@w;height:@h;}
+.margin_tl(@t,@l){margin-top:@t;margin-left:@l;}
+
+/*定位*/
+.fix(@t,@l){position:absolute;top:@t;left:@l;} //绝对定位
+
+/*背景*/
+.bg_url(@url,@x:0,@y:0){background:url(@url) no-repeat @x @y;}
+.opacity(@opa){opacity:@opa; -moz-opacity:@opa;}
+
+/******************* 动画时间及过渡效果************************/
+.ani_time(@time:0.5s,@ease:ease){transition:all @time @ease; -moz-transition:all @time @ease; -o-transition:all @time @ease;
+ -ms-transition:all @time @ease; -webkit-transition:all @time @ease;}
+/******************* 动画旋转 ********************************/
+.ani_rotate(@rotate:180deg){transform:rotate(@rotate); -moz-transform:rotate(@rotate);
+	-ms-transform:rotate(@rotate); -o-transform:rotate(@rotate); -webkit-transform:rotate(@rotate);}
+/******************** 动画变大变小 ****************************/
+.ani_scale(@scale:1){transform:scale(@scale); -moz-transform:scale(@scale);
+	-ms-transform:scale(@scale); -o-transform:scale(@scale); -webkit-transform:scale(@scale);}
+/******************** 动画X Y ********************************/
+.ani_translate(@x:0px,@y:0px){transform:translate(@x,@y); -moz-transform:translate(@x,@y);
+	-ms-transform:translate(@x,@y); -o-transform:translate(@x,@y); -webkit-transform:translate(@x,@y);}
+.ani_3D(@z:1;@x:0){-webkit-transform: scaleZ(@z) rotateX(@x);
+    -moz-transform: scaleZ(@z) rotateX(@x);
+    -ms-transform: scaleZ(@z) rotateX(@x);
+    -o-transform: scaleZ(@z) rotateX(@x);
+    transform: scaleZ(@z) rotateX(@x);}
+
+.center(){max-width:1200px;margin:0 auto;}
+.radius(@r){border-radius:@r;-khtml-border-radius:@r;-moz-border-radius:@r;-webkit-border-radius:@r;}
+.circle(@d,@color,@top,@left,@z){
+	position:absolute;top:@top;left:@left;z-index:@z;width:@d;height:@d;background-color:@color;
+	.radius(50%);
+}
+.c_animation(@name,@time){-webkit-animation: @name @time ease-in-out infinite;
+                -moz-animation: @name @time ease-in-out infinite;
+                -o-animation: @name @time ease-in-out infinite;
+                animation: @name @time ease-in-out infinite;}

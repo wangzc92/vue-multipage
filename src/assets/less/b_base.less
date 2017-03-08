@@ -1,0 +1,33 @@
+//空心按钮
+.hollow{color:#666; background-color:none; border-color:@c;
+  &:hover{background-color:#f2f2f2;}
+}
+//图片
+img{*width:100%; max-width:100%;}
+
+//全站主体宽度
+.w{width:1000px; margin-left:auto; margin-right:auto;}
+
+//外边距和内边距
+.m{margin-left:@15px; margin-right:@15px;}
+.p{padding-left:@15px; padding-right:@15px;}
+
+//浮动相关
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;}
+.clearfix{clear:both; zoom:1;
+	&:after{display:block; clear:both; height:0; visibility:hidden; font-size:0; content:".";}
+}
+//垂直居中相关
+.v{display:inline-block; width:0; height:100%; vertical-align:middle; visibility:hidden; font-size:0;}
+.v_b:before,.v_a:after{display:inline-block; vertical-align:middle; width:0; height:100%; visibility:hidden; font-size:0; content:'.';}
+
+//水平并排相关
+.lineBlockBox{display:table; width:100%; font-size:0; letter-spacing:-3px;  word-spacing:-3px;}
+.lineBlock{display:inline-block; *display:inline; *zoom:1; vertical-align:middle; font-size:@12px; letter-spacing:normal; word-spacing:normal;}
+.lineBlockBoxs{display:table; width:100%; font-size:0; letter-spacing:-3px;  word-spacing:-3px;
+  >*{.lineBlock;}
+}
+//处理超出字符
+.strLen{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
